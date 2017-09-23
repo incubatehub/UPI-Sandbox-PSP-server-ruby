@@ -6,13 +6,15 @@ This a queick start UPI PSP server written with ruby.
 1. Place the project in your server with static ip.
 2. run following commands within the project root directory
   1.  ```
-      bundle install
+        bundle install
       ```
 
-  2.  ```
-      sequel -m migrations/ sqlite://db/dummy_psp.db
+  2.  Perform database migrations
       ```
-3. ```
+        sequel -m migrations/ sqlite://db/dummy_psp.db
+      ```
+3. Start the Server
+   ```
     thin -R config.ru start
    ```
 4. visit psp config page at
