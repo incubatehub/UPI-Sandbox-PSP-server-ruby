@@ -1,0 +1,5 @@
+<upi:RespValAdd xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0" ts="" orgId="" msgId="" />
+    <Txn id="" note="" refId="" refUrl="" ts="" type="ValAdd" />
+    <Resp reqMsgId="" result="SUCCESS|FAILURE|PARTIAL|DEEMED" errCode="" maskName="" />
+</upi:RespValAdd>

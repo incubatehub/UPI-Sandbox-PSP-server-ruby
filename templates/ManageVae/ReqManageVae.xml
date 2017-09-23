@@ -1,0 +1,8 @@
+<upi:ReqManageVae xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0" ts="" orgId="" msgId="" />
+    <Txn id="" note="" refId=""  refUrl="" ts="" type="ManageVae" />
+    <VaeList>
+        <Vae op="ADD|UPDATE|REMOVE" seqNum="1" name="LIC" addr="lic@hdfc" logo="image" url="" />
+        <Vae op="ADD|UPDATE|REMOVE" seqNum="2" name="IRCTC" addr="irctc@hdfc" logo="image" url="" />
+    </VaeList>
+</upi:ReqManageVae>

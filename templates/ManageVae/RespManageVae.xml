@@ -1,0 +1,8 @@
+<upi:RespManageVae xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0" ts="" orgId="" msgId="" />
+    <Txn id="" note="" refId=""  refUrl="" ts="" type="ManageVae" />
+    <Resp reqMsgId="" result="SUCCESS|FAILURE|PARTIAL|DEEMED" errCode="" />
+        <Ref op="" seqNum="1" addr="" result="SUCCESS|FAILURE" />
+        <Ref op="" seqNum="2" addr="" result="SUCCESS|FAILURE" />
+    </Resp>
+</upi:RespManageVae>

@@ -1,0 +1,112 @@
+<upi:ReqPay xmlns:upi="http://npci.org/upi/schema/">
+  <Head ver="1.0" ts="" orgId="" msgId="" />
+  <!-- Meta Info -->
+  <Meta>
+      <Tag name="PAYREQSTART" value="" />
+      <Tag name="PAYREQEND" value="" />
+  </Meta>
+<!-- -->
+  <Txn id="" note="" custRef="" refId="" refUrl="" ts="" type="PAY|COLLECT|DEBIT|CREDIT|REVERSAL|REFUND" orgTxnId="" orgRespCode="">
+      <RiskScores>
+        <Score provider="sp" type="TXNRISK" value="" />
+        <Score provider="npci" type="TXNRISK" value="" />
+      </RiskScores>
+
+      <Rules>
+        <Rule name="EXPIREAFTER" value="35" />
+        <Rule name="MINAMOUNT" value="" />
+      </Rules>
+  </Txn>
+  <Payer addr="" name="" seqNum="" type="PERSON|ENTITY" code="">
+      <Info>
+          <Identity type="PAN|AADHAAR|ACCOUNT" verifiedName="" />
+          <Rating verifiedAddress="TRUE|FALSE" />
+      </Info>
+      <Device>
+          <Tag Name="MOBILE" value="" />
+          <Tag Name="GEOCODE" value="" />
+          <Tag Name="LOCATION" value="" />
+          <Tag Name="IP" value="" />
+          <Tag Name="TYPE" value="" />
+          <Tag Name="ID" value="" />
+          <Tag Name="OS" value="" />
+          <Tag Name="APP" value="" />
+          <Tag Name="CAPABILITY" value="" />
+      </Device>
+      <Ac addrType="AADHAAR">
+          <Detail name="IIN" value="" />
+          <Detail name="UIDNUM" value="" />
+      </Ac>
+      <Ac addrType="ACCOUNT">
+          <Detail name="IFSC" value="" />
+          <Detail name="ACTYPE" value="SAVINGS|CURRENT|DEFAULT" />
+          <Detail name="ACNUM" value="" />
+      </Ac>
+      <Ac addrType="MOBILE">
+          <Detail name="MMID" value="" />
+          <Detail name="MOBNUM" value="" />
+      </Ac>
+      <Ac addrType="CARD">
+          <Detail name="ACTYPE" value="SAVINGS|CURRENT" />
+          <Detail name="CARDNUM" value="" />
+      </Ac>
+      <Creds>
+          <Cred type="AADHAAR" sybType="IIR|FMR|FIR|OTP">
+              <Data code="" type="" ki="">
+                <!-- BASE 64 ENCODED/ENCRYPTED AUTHENTICATION DATA-->
+              </Data>
+              <Skey ki=""></Skey>
+              <Hmac></Hmac>
+          </Cred>
+          <Cred type="OTP" sybType="SMS|EMAIL|HOTP|TOTP">
+              <Data code="" type="" ki="">
+                <!-- BASE 64 ENCODED/ENCRYPTED AUTHENTICATION DATA-->
+              </Data>
+          </Cred>
+          <Cred type="PIN" sybType="MPIN">
+              <Data code="" type="" ki="">
+                <!-- BASE 64 ENCODED/ENCRYPTED AUTHENTICATION DATA-->
+              </Data>
+          </Cred>
+          <Cred type="CARD" sybType="CVV1|CVV2|EMV">
+              <Data code="" type="" ki="">
+                <!-- BASE 64 ENCODED/ENCRYPTED AUTHENTICATION DATA-->
+              </Data>
+          </Cred>
+          <Cred type="PreApproved" sybType="NA">
+              <Data code="" type="" ki="">
+                <!-- BASE 64 ENCODED/ENCRYPTED AUTHENTICATION DATA, DATA INCLUDES respCode and approvalRef RES|A123554 , "|" to used as delimeter-->
+              </Data>
+          </Cred>
+      </Creds>
+      <Amount value="" curr="INR">
+        <Split name="PURCHASE|CASHBACK" value="" />
+      </Amount>
+  </Payer>
+  <Payees>
+      <Payee addr="" name="" seqNum="" type="PERSON|ENTITY" code="">
+          <Info>
+              <Identity type="PAN|AADHAAR|ACCOUNT" verifiedName="" />
+              <Rating verifiedAddress="TRUE|FALSE" />
+          </Info>
+          <Device>
+              <Tag name="MOBILE"  value="+919929992992" />
+              <Tag name="GEOCODE"  value="12.9967,77.5567" />
+              <Tag name="LOCATION"  value="Sarjapur road, Bangalore, KA, IN" />
+              <Tag name="IP"  value="123.123.12.12" />
+              <Tag name="TYPE"  value="" />
+              <Tag name="ID"  value="1235353656" />
+              <Tag name="OS"  value="Android 4.4" />
+              <Tag name="App"  value="Test 1.0" />
+              <Tag name="CAPABILITY"  value="011001" />
+          </Device>
+          <Ac addrType="AADHAAR">
+              <Detail name="IIN" value="" />
+              <Detail name="UIDNUM" value="" />
+          </Ac>
+          <Amount value="" curr="INR">
+              <Split name="PURCHASE|CASHBACK" value="" />
+          </Amount>
+      </Payee>
+  </Payees>
+</upi:ReqPay>

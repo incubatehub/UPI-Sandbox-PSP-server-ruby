@@ -1,0 +1,57 @@
+<upi:ReqSetCre xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0" ts="" orgId="" msgId="" />
+    <Txn id="" note="" refId="" refUrl="" ts="" type="SetCre" />
+    <Payer addr="" name="" seqNum="" type="PERSON|ENTITY" code="">
+        <Ac addrType="AADHAAR">
+            <Detail name="IIN" value="" />
+            <Detail name="UIDNUM" value="" />
+        </Ac>
+        <Ac addrType="ACCOUNT">
+            <Detail name="IFSC" value="" />
+            <Detail name="ACTYPE" value="SAVINGS|CURRENT|DEFAULT" />
+            <Detail name="ACNUM" value="" />
+        </Ac>
+        <Ac addrType="MOBILE">
+            <Detail name="MMID" value="" />
+            <Detail name="MOBNUM" value="" />
+        </Ac>
+        <Ac addrType="CARD">
+            <Detail name="ACTYPE" value="SAVINGS|CURRENT" />
+            <Detail name="CARDNUM" value="" />
+        </Ac>
+        <Creds>
+            <Cred type="AADHAAR" sybType="IIR|FMR|FIR|OTP">
+                <Data code="" type="" ki="">
+                  <!-- BASE 64 ENCODED/ENCRYPTED AUTHENTICATION DATA-->
+                </Data>
+                <Skey ki=""></Skey>
+                <Hmac></Hmac>
+            </Cred>
+            <Cred type="OTP" sybType="SMS|EMAIL|HOTP|TOTP">
+                <Data code="" type="" ki="">
+                  <!-- BASE 64 ENCODED/ENCRYPTED AUTHENTICATION DATA-->
+                </Data>
+            </Cred>
+            <Cred type="PIN" sybType="MPIN">
+                <Data code="" type="" ki="">
+                  <!-- BASE 64 ENCODED/ENCRYPTED AUTHENTICATION DATA-->
+                </Data>
+            </Cred>
+            <Cred type="CARD" sybType="CVV1|CVV2|EMV">
+                <Data code="" type="" ki="">
+                  <!-- BASE 64 ENCODED/ENCRYPTED AUTHENTICATION DATA-->
+                </Data>
+            </Cred>
+            <Cred type="PreApproved" sybType="NA">
+                <Data code="" type="" ki="">
+                  <!-- BASE 64 ENCODED/ENCRYPTED AUTHENTICATION DATA, DATA INCLUDES respCode and approvalRef RES|A123554 , "|" to used as delimeter-->
+                </Data>
+            </Cred>
+        </Creds>
+        <NewCred type="PIN" subType="MPIN">
+            <data>
+              <!-- Base 64 Encrypted/Encoded Authetication data -->
+            </data>
+        </NewCred>
+    </Payer>
+</upi:ReqSetCre>

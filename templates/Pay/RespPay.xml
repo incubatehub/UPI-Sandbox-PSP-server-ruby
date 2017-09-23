@@ -1,0 +1,13 @@
+<upi:RespPay xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0" ts="" orgId="" msgId="" />
+    <Txn id="" note="" refId="" custRef="" refUrl="" ts="" type="PAY|COLLECT|CREDIT|REVERSAL|REFUND" orgTxnId="">
+      <RiskScores>
+        <Score provider="sp" type="TXNRISK" value="" />
+        <Score provider="npci" type="TXNRISK" value="" />
+      </RiskScores>
+    </Txn>
+    <Resp reqMsgId="" result="SUCCESS|FAILURE|PARTIAL|DEEMED" errCode="">
+        <Ref type="PAYER"  seqNum="" addr="" regName="" settAmount="" orgAmount="" settCurrency="" acNum="" approvalNum="" respCode="" reversalResponseCode="" />
+        <Ref type="PAYEE"  seqNum="" addr="" regName="" settAmount="" orgAmount="" settCurrency="" acNum="" approvalNum="" respCode="" reversalResponseCode="" />
+     </Resp>
+</upi:RespPay>

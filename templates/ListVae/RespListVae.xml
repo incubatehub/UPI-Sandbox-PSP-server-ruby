@@ -1,0 +1,9 @@
+<upi:RespListVae xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0" ts="" orgId="" msgId="" />
+    <Txn id="" note="" refId=""  refUrl="" ts="" type="ListVae" />
+    <Resp reqMsgId="" result="SUCCESS|FAILURE|PARTIAL|DEEMED" errCode="" />
+    <VaeList>
+        <Vae name="LIC" addr="lic@hdfc" logo="image" url="" />
+        <Vae name="IRCTC" addr="irctc@hdfc" logo="image" url="" />
+    </VaeList>
+</upi:RespListVae>

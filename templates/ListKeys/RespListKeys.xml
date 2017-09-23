@@ -1,0 +1,17 @@
+<upi:RespListKeys xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0" ts="" orgId="" msgId="" />
+    <Txn id="" note="" refId="" refUrl="" ts="" type="ListKeys/GetToken"  />
+    <Resp reqMsgId="" result="SUCCESS|FAILURE|PARTIAL|DEEMED" errCode="" />
+    <KeyList>
+        <Key code="NPCI" type="PKI" ki="yyyymmdd">
+            <KeyValue>
+                <!--Base64 encoded certificate  -->
+            </KeyValue>
+        </Key>
+        <Key code="NPCI" type="PKI" ki="yyyymmdd">
+            <KeyValue>
+                <!--TOKEN| Encrypted Base64 encoded certificate  -->
+            </KeyValue>
+        </Key>
+    </KeyList>
+</upi:RespListKeys>

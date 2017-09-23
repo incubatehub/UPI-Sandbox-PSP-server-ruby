@@ -1,0 +1,153 @@
+.row
+  .col.s6.white
+    .input-field
+      input type="text" placeholder="TimeStamp" disabled="true" value="#{Time.now.iso8601}"
+      label for="transactionid" TimeStamp
+  .col.s6.white
+    .input-field
+      input type="text" placeholder=""  disabled="true" value="#{Meta.first ? Meta.first.org_id : ''}"
+      label for="transactionid" Organization Id
+  .col.s6.white
+    .input-field
+      input type="text" placeholder=""  disabled="true" value="#{SecureRandom.hex(5)}"
+      label for="transactionid" Message Id
+  .col.s6.white
+    .input-field
+      input#transactionid type="text" placeholder="transaction id, same as <Txn> block"
+      label for="transactionid" Transaction Id
+.row
+  input#api type="hidden" value="#{@current}"
+  .col.s12.m6
+    .card.blue.darken-4
+      .card-content
+        .card-title.white-text Request: /upi/Req#{@current}
+      .row.white
+        .col.s12
+          #request
+            -if @current!="AuthDetails"
+              |#{@dummydata}
+
+      .card-action.center
+        -if @current!="AuthDetails"
+          button.btn.orange onclick="request()" send
+  .col.s12.m6
+    .card.orange
+      .card-content
+        .card-title Response: /upi/Resp#{@current}
+      .row.white
+        .col.s12
+          #response
+            -if @current=="AuthDetails"
+              |#{@dummydata}
+      .card-action.center
+        -if @current=="AuthDetails"
+          button.btn.blue.darken-4 onlclick="response()" send
+.row
+  .card
+    .card-content
+      .card-title Acknowledgement
+      .row
+        .col.s12
+          #acknowledgement
+
+script {src="/js/ace/ace.js" type="text/javascript" charset="utf-8"}
+script {src="/js/ace/mode-xml.js" type="text/javascript" charset="utf-8"}
+
+css:
+  #request {
+       height:400px;
+       width:100%;
+  }
+  #response {
+       height:400px;
+       width:100%;
+  }
+  #acknowledgement {
+       height:200px;
+       width:100%;
+  }
+
+javascript:
+  var api=document.getElementById('api').value;
+  var editor3 = ace.edit("acknowledgement");
+  editor3.setTheme("ace/theme/chrome");
+  editor3.getSession().setMode("ace/mode/xml");
+  editor3.setReadOnly(true);
+  var editor1 = ace.edit("request");
+  editor1.setTheme("ace/theme/chrome");
+  editor1.getSession().setMode("ace/mode/xml");
+  if(api!="AuthDetails")
+    editor1.setReadOnly(false);
+  else
+    editor1.setReadOnly(true);
+  var editor2 = ace.edit("response");
+  editor2.setTheme("ace/theme/chrome");
+  if(api=="AuthDetails")
+    editor2.setReadOnly(false);
+  else
+    editor2.setReadOnly(true);
+
+  editor2.getSession().setMode("ace/mode/xml");
+  editor1.setWrapBehavioursEnabled(true)
+  editor2.setWrapBehavioursEnabled(true)
+  editor3.setWrapBehavioursEnabled(true)
+  editor2.setValue("<!--Response-->")
+  function request(){
+      var data=editor1.getValue();
+      var transaction_id=$('#transactionid').val();
+      req_api="Req"+api;
+      if(transaction_id.length<1 || transaction_id.trim().length<1)
+      {
+        alert("Please Provide transaction id")
+        return false;
+      }
+
+      $.ajax({
+        url:'/request'
+        ,method:'POST'
+        ,contentType:"application/json"
+        ,data:JSON.stringify({api:req_api,xml:data,transaction_id:transaction_id})
+        ,success:function(resp){
+            editor3.setValue(resp.data);
+          }
+        ,failure:function(resp){
+          alert(resp)
+        }
+      })
+  }
+  function response(){
+    var data=editor2.getValue();
+    var transaction_id=$('#transactionid').val();
+
+    response_api="Resp"+api;
+    $.ajax({
+      url:'/request'
+      ,method:'POST'
+      ,contentType:"application/xml"
+      ,data:JSON.stringify({api:response_api,xml:data,transaction_id:transaction_id})
+      ,success:function(resp){
+          alert(resp)
+        }
+      ,failure:function(resp){
+        alert(resp)
+      }
+    })
+  }
+
+  var client = new Faye.Client('/live/ws');
+  respFunction=function(message) {
+    console.log(message);
+    if(editor2)
+    {
+      editor2.setValue(message.message)
+    }
+  }
+
+  var subscription = client.subscribe('/RespListAccPvd',respFunction);
+  var subscription = client.subscribe('/RespListAccount',respFunction);
+  var subscription = client.subscribe('/RespPay',respFunction);
+  var subscription = client.subscribe('/RespSetCre',respFunction);
+  var subscription = client.subscribe('/ReqAuthDetails',respFunction);
+  var subscription = client.subscribe('/RespBalEnq',respFunction);
+  var subscription = client.subscribe('/RespChkTxn',respFunction);
+  var subscription = client.subscribe('/RespRegMob',respFunction);

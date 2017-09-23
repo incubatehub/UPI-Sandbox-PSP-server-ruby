@@ -1,0 +1,24 @@
+<upi:ReqListAccount xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0" ts="" orgId="" msgId="" />
+    <Txn id="" note="" refId="" refUrl="" ts="" type="ListAccount" />
+    <Link type="MOBILE|AADHAAR" value="" />
+    <Payer addr="" name="" seqNum="" type="PERSON|ENTITY">
+        <Ac addrType="AADHAAR">
+            <Detail name="IIN" value="" />
+            <Detail name="UIDNUM" value="" />
+        </Ac>
+        <Ac addrType="ACCOUNT">
+            <Detail name="IFSC" value="" />
+            <Detail name="ACTYPE" value="SAVINGS|CURRENT|DEFAULT" />
+            <Detail name="ACNUM" value="" />
+        </Ac>
+        <Ac addrType="MOBILE">
+            <Detail name="MMID" value="" />
+            <Detail name="MOBNUM" value="" />
+        </Ac>
+        <Ac addrType="CARD">
+            <Detail name="ACTYPE" value="SAVINGS|CURRENT" />
+            <Detail name="CARDNUM" value="" />
+        </Ac>
+    </Payer>
+</upi:ReqListAccount>

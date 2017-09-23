@@ -1,0 +1,29 @@
+.container
+  form.card.col.s12 method="post" action="/Config"
+    .card-content
+      .card-title PSP Setup
+      .row
+        .col.s12
+          |Fill the details as per your sandbox regitration info
+      -if @errors &&  @errors.length>0
+        .row
+          .col.s12.red.white-text
+            |#{@errors}
+      .row
+        .input-field
+          input#org_id.validate placeholder="Organization id" type="text" name="org_id" required="" value="#{Meta.first ? Meta.first.org_id : ''}"
+          label for="org_id"
+      .row
+        .input-field
+          input#npci_sandbox_ip.validate placeholder="UPI sandbox ip" type="text" name="npci_sandbox_ip" required="" value="#{Meta.first ? Meta.first.npci_sandbox_ip : ''}"
+          label for="npci_sandbox_ip"
+      .row
+        .input-field
+          input#psp_unique_name.validate placeholder="Your unique PSP Name" type="text" name="psp_unique_name" required="" value="#{Meta.first ? Meta.first.psp_unique_name : ''}"
+          label for="psp_unique_name"
+      .row
+        .input-field
+          input#api_key.validate placeholder="UPI Sandbox api key" type="text" name="api_key" required="" value="#{Meta.first ? Meta.first.api_key : ''}"
+          label for="api_key"
+    .card-action.center
+        button.btn.btn-wave.orange Save

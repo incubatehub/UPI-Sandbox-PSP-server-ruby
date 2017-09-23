@@ -1,0 +1,7 @@
+<upi:RespChkTxn xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0" ts="" orgId="" msgId="" />
+    <Txn id="" note="" refId=""  refUrl="" ts="" type="ChkTxn" orgMsgId="" orgTxnId="" />
+    <Resp reqMsgId="" result="SUCCESS|FAILURE|PARTIAL|DEEMED|PENDING" errCode="" />
+    <Ref type="PAYER" seqNum="" addr="" regName="" settAmount="" settCurrency="" acNumber="" approvalNum="" respCode="" reversalRespCode="" />
+    <Ref type="PAYEE" seqNum="" addr="" regName="" settAmount="" settCurrency="" acNumber="" approvalNum="" respCode="" reversalRespCode="" />
+</upi:RespChkTxn>

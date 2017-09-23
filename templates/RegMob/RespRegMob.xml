@@ -1,0 +1,5 @@
+<upi:RespRegMob xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0" ts="" orgId="" msgId="" />
+    <Txn id="" note="" refId=""  refUrl="" ts="" type="RegMob" />
+    <Resp reqMsgId="" result="SUCCESS|FAILURE|PARTIAL|DEEMED" errCode="" />
+</upi:RespRegMob>

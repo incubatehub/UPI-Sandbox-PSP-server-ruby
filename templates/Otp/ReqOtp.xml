@@ -1,0 +1,34 @@
+<upi:ReqOtp xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0" ts="" orgId="" msgId="" />
+    <Txn id="" note="" refId="" refUrl="" ts="" type="Otp" />
+    <Payer addr="" name="" seqNum="" type="PERSON|ENTITY">
+        <Device>
+            <Tag Name="MOBILE" value="" />
+            <Tag Name="GEOCODE" value="" />
+            <Tag Name="LOCATION" value="" />
+            <Tag Name="IP" value="" />
+            <Tag Name="TYPE" value="" />
+            <Tag Name="ID" value="" />
+            <Tag Name="OS" value="" />
+            <Tag Name="APP" value="" />
+            <Tag Name="CAPABILITY" value="" />
+        </Device>
+        <Ac addrType="AADHAAR">
+            <Detail name="IIN" value="" />
+            <Detail name="UIDNUM" value="" />
+        </Ac>
+        <Ac addrType="ACCOUNT">
+            <Detail name="IFSC" value="" />
+            <Detail name="ACTYPE" value="SAVINGS|CURRENT|DEFAULT" />
+            <Detail name="ACNUM" value="" />
+        </Ac>
+        <Ac addrType="MOBILE">
+            <Detail name="MMID" value="" />
+            <Detail name="MOBNUM" value="" />
+        </Ac>
+        <Ac addrType="CARD">
+            <Detail name="ACTYPE" value="SAVINGS|CURRENT" />
+            <Detail name="CARDNUM" value="" />
+        </Ac>
+    </Payer>
+</upi:ReqOtp>

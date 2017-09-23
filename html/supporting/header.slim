@@ -1,0 +1,30 @@
+nav.blue.darken-4
+  .nav-wrapper
+    a.brand-logo.center href="#"  Test PSP Server
+    ul#slide-out.side-nav.hide-on-large-only
+      li.subheader.center
+        |PSP config
+      li.left-align
+        a.waves-effect href="/Config" class="#{@current=='Config' ? 'blue darken-4 white-text': ''}" Config
+      li.subheader.center
+        |APIS
+      li
+        .divider
+      li.left-align
+        a.waves-effect href="/Pay" class="#{@current=='Pay' ? 'blue darken-4 white-text': ''}"  Pay
+      li.left-align
+        a.waves-effect href="/AuthDetails" class="#{@current=='AuthDetails' ? 'blue darken-4 white-text': ''}"  AuthDetails
+      li.left-align
+        a.waves-effect href="/RegMob" class="#{@current=='RegMob' ? 'blue darken-4 white-text': ''}"  RegMob
+      li.left-align
+        a.waves-effect href="/ChkTxn" class="#{@current=='ChkTxn' ? 'blue darken-4 white-text': ''}"  ChkTxn
+      li.left-align
+        a.waves-effect href="/SetCre" class="#{@current=='SetCre' ? 'blue darken-4 white-text': ''}"  SetCre
+      li.left-align
+        a.waves-effect href="/BalEnq" class="#{@current=='BalEnq' ? 'blue darken-4 white-text': ''}"  BalEnq
+      li.left-align
+        a.waves-effect href="/ListAccount" class="#{@current=='ListAccount' ? 'blue darken-4 white-text': ''}"  ListAccount
+      li.left-align
+        a.waves-effect href="/ListAccPvd" class="#{@current=='ListAccPvd' ? 'blue darken-4 white-text': ''}"  ListAccPvd
+    a.button-collapse.hide-on-large-only href="#" data-activates="slide-out"
+      i.material-icons menu

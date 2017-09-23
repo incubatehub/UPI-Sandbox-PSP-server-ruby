@@ -1,0 +1,11 @@
+<upi:ReqValAdd xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0" ts="" orgId="" msgId="" />
+    <Txn id="" note="" refId="" refUrl="" ts="" type="ValAdd" />
+    <Payer addr="" name="" seqNum="" type="PERSON|ENTITY">
+        <Info>
+            <Identity type="PAN|AADHAAR|ACCOUNT" verifiedName="" />
+            <Rating verifiedAddress="TRUE|FALSE" />
+        </Info>
+    </Payer>
+    <Payee seqNum="" addr="" name="" />
+</upi:ReqValAdd>

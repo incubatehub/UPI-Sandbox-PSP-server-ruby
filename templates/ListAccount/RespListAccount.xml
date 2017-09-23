@@ -1,0 +1,13 @@
+<upi:RespListAccount xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0" ts="" orgId="" msgId="" />
+    <Txn id="" note="" refId=""  refUrl="" ts="" type="ListAccount" />
+    <Resp reqMsgId="" result="SUCCESS|FAILURE|PARTIAL|DEEMED" errCode="" />
+    <AccountList>
+        <Account accType="SAVINGS|CURRENT" mbeba="" accRefNumber="" maskedAccNumber="" ifsc="HDFC0010012" mmid="9056014" name="" aeba="Y/N">
+            <CedsAllowed type="AADHAAR" subType="IIR|FMR|FIR|OTP" dType="" dLength="" />
+        </Account>
+        <Account accType="SAVINGS|CURRENT" mbeba="" accRefNumber="" maskedAccNumber="" ifsc="HDFC0010043" mmid="9056014" name="" aeba="Y/N">
+            <CedsAllowed type="AADHAAR" subType="IIR|FMR|FIR|OTP" dType="" dLength="" />
+        </Account>
+    </AccountList>
+</upi:RespListAccount>

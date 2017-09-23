@@ -1,0 +1,4 @@
+<upi:ReqChkTxn xmlns:upi="http://npci.org/upi/schema/">
+  <Head ver="1.0" ts="" orgId="" msgId="" />
+  <Txn id="" note="" refId=""  refUrl="" ts="" type="ChkTxn" orgMsgId="" orgTxnId="" />
+</upi:ReqChkTxn>

@@ -1,0 +1,9 @@
+<upi:ReqListKeys xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0" ts="" orgId="" msgId="" />
+    <Txn id="" note="" refId="" refUrl="" ts="" type="ListKeys/GetToken"  />
+    <Creds>
+        <Cred type="challenge" subType="initial/reset/rotate">
+            <data code="" ki=""></data>
+        </Cred>
+    </Creds>
+</upi:ReqListKeys>

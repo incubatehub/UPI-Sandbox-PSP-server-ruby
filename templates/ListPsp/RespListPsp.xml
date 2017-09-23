@@ -1,0 +1,9 @@
+<upi:RespListAccPvd xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0" ts="" orgId="" msgId="" />
+    <Txn id="" note="" refId=""  refUrl="" ts="" type="ListPsp" />
+    <Resp reqMsgId="" result="SUCCESS|FAILURE|PARTIAL|DEEMED" errCode="" />
+    <PspList>
+        <Psp name="HDFC" codes="hdfcgold,hdfcsilver" active="Y/N" url="" spocName="" spocEmail="" spocPhone="" lastModifiedTs="" />
+        <Psp name="ICICI" codes="icici,iciciwallet" active="Y/N" url="" spocName="" spocEmail="" spocPhone="" lastModifiedTs="" />
+    </PspList>
+</upi:RespListAccPvd>

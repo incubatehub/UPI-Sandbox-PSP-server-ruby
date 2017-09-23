@@ -1,0 +1,51 @@
+<upi:ReqRegMob xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0" ts="" orgId="" msgId="" />
+    <Txn id="" note="" refId=""  refUrl="" ts="" type="RegMob" />
+    <Payer addr="" name="" seqNum="" type="PERSON|ENTITY" code="">
+        <Device>
+            <Tag Name="MOBILE" value="" />
+            <Tag Name="GEOCODE" value="" />
+            <Tag Name="LOCATION" value="" />
+            <Tag Name="IP" value="" />
+            <Tag Name="TYPE" value="" />
+            <Tag Name="ID" value="" />
+            <Tag Name="OS" value="" />
+            <Tag Name="APP" value="" />
+            <Tag Name="CAPABILITY" value="" />
+        </Device>
+        <Ac addrType="AADHAAR">
+            <Detail name="IIN" value="" />
+            <Detail name="UIDNUM" value="" />
+        </Ac>
+        <Ac addrType="ACCOUNT">
+            <Detail name="IFSC" value="" />
+            <Detail name="ACTYPE" value="SAVINGS|CURRENT|DEFAULT" />
+            <Detail name="ACNUM" value="" />
+        </Ac>
+        <Ac addrType="MOBILE">
+            <Detail name="MMID" value="" />
+            <Detail name="MOBNUM" value="" />
+        </Ac>
+        <Ac addrType="CARD">
+            <Detail name="ACTYPE" value="SAVINGS|CURRENT" />
+            <Detail name="CARDNUM" value="" />
+        </Ac>
+    </Payer>
+    <RegDetails type="FORMAT1">
+          <Detail name="MOBILE" value="" />
+          <Detail name="CARDDIGITS" value="" />
+          <Detail name="EXPDATE" value="" />
+          <Creds>
+                <Cred type="OTP" subType="SMS|EMAIL|HOTP|TOTP">
+                    <Data code="" ki="">
+                        <!-- Base64 encoded/Encrypted authentication Data-->
+                    </Data>
+                </Cred>
+                <Cred type="PIN" subType="MPIN">
+                    <Data code="" ki="">
+                        <!-- Base64 encoded/Encrypted authentication Data-->
+                    </Data>
+                </Cred>
+          </Creds>
+    </RegDetails>
+</upi:ReqRegMob>

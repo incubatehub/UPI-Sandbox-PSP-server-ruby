@@ -1,0 +1,29 @@
+<upi:ReqAuthDetails xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0" ts="" orgId="" msgId="" />
+    <Txn id="" note="" refId="" custRef="" refUrl="" ts="" type="PAY|COLLECT|CREDIT|REVERSAL|REFUND" orgTxnId="">
+      <RiskScores>
+        <Score provider="sp" type="TXNRISK" value="" />
+        <Score provider="npci" type="TXNRISK" value="" />
+      </RiskScores>
+    </Txn>
+    <Payer addr="" name="" seqNum="" type="PERSON|ENTITY">
+      <Info>
+          <Identity type="PAN|AADHAAR|ACCOUNT" verifiedName="" />
+          <Rating verifiedAddress="TRUE|FALSE" />
+      </Info>
+      <Amount value="" curr="INR">
+          <Split name="PURCHASE|CASHBACK" value="" />
+      </Amount>
+    </Payer>
+    <Payees>
+        <Payee addr="" name="" seqNum="" type="PERSON|ENTITY" code="">
+            <Info>
+                <Identity type="PAN|AADHAAR|ACCOUNT" verifiedName="" />
+                <Rating verifiedAddress="TRUE|FALSE" />
+            </Info>
+            <Amount value="" curr="INR">
+                <Split name="PURCHASE|CASHBACK" value="" />
+            </Amount>
+        </Payee>
+    </Payees>
+</upi:ReqAuthDetails>

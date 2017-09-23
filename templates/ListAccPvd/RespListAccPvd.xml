@@ -1,0 +1,9 @@
+<upi:RespListAccPvd xmlns:upi="http://npci.org/upi/schema/">
+    <Head ver="1.0" ts="" orgId="" msgId="" />
+    <Txn id="" note="" refId=""  refUrl="" ts="" type="ListAccPvd" />
+    <Resp reqMsgId="" result="SUCCESS|FAILURE|PARTIAL|DEEMED" errCode="" />
+    <AccPvdList>
+        <AccPvd name="HDFC" iin="12345" ifsc="" prods="AEPS,IMPS,CARD,NFS" url="" spocName="" spocEmail="" spocPhone="" lastModifiedTs="" />
+        <AccPvd name="ICICI" iin="342344" ifsc="" prods="AEPS,IMPS,CARD,NFS" url="" spocName="" spocEmail="" spocPhone="" lastModifiedTs="" />
+    </AccPvdList>
+</upi:RespListAccPvd>

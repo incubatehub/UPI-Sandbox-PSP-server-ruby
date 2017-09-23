@@ -1,0 +1,214 @@
+
+/*------------------------ menu icons ----------------------*/
+   @font-face {
+    font-family: 'icomoon';
+    src:  url('../../css/fonts/icons/icomoon.eot?ds6m3p');
+    src:  url('../../css/fonts/icons/icomoon.eot?ds6m3p#iefix') format('embedded-opentype'),
+      url('../../css/fonts/icons/icomoon.ttf?ds6m3p') format('truetype'),
+      url('../../css/fonts/icons/icomoon.woff?ds6m3p') format('woff'),
+      url('../../css/fonts/icons/icomoon.svg?ds6m3p#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logo:before {
+  content: "\e900";
+}
+.icon-academia:before {
+  content: "\e901";
+}
+.icon-accomplishments:before {
+  content: "\e902";
+}
+.icon-all-programs:before {
+  content: "\e903";
+}
+.icon-awards-recognisition:before {
+  content: "\e904";
+}
+.icon-become-sponsor:before {
+  content: "\e905";
+}
+.icon-by-initiative:before {
+  content: "\e906";
+}
+.icon-by-passion:before {
+  content: "\e907";
+}
+.icon-campaigns:before {
+  content: "\e908";
+}
+.icon-comments:before {
+  content: "\e909";
+}
+.icon-corporate:before {
+  content: "\e90a";
+}
+.icon-creative_agency:before {
+  content: "\e90b";
+}
+.icon-earn:before {
+  content: "\e90c";
+}
+.icon-evaluations:before {
+  content: "\e90d";
+}
+.icon-foundation:before {
+  content: "\e90e";
+}
+.icon-get-sponsored:before {
+  content: "\e90f";
+}
+.icon-get-unique-link:before {
+  content: "\e910";
+}
+.icon-government:before {
+  content: "\e911";
+}
+.icon-incubator:before {
+  content: "\e912";
+}
+.icon-inivte-and-earn:before {
+  content: "\e913";
+}
+.icon-likes:before {
+  content: "\e914";
+}
+.icon-messages:before {
+  content: "\e915";
+}
+.icon-organisations:before {
+  content: "\e916";
+}
+.icon-org-type:before {
+  content: "\e917";
+}
+.icon-participants:before {
+  content: "\e918";
+}
+.icon-personal:before {
+  content: "\e919";
+}
+.icon-prize-money:before {
+  content: "\e91a";
+}
+.icon-program:before {
+  content: "\e91b";
+}
+.icon-project:before {
+  content: "\e91c";
+}
+.icon-refer-and-earn:before {
+  content: "\e91d";
+}
+.icon-reference-recommendation:before {
+  content: "\e91e";
+}
+.icon-register:before {
+  content: "\e91f";
+}
+.icon-research:before {
+  content: "\e920";
+}
+.icon-rewards-overview:before {
+  content: "\e921";
+}
+.icon-share-and-earn:before {
+  content: "\e922";
+}
+.icon-share-and-earn-two:before {
+  content: "\e923";
+}
+.icon-share-in-group:before {
+  content: "\e924";
+}
+.icon-sign-out:before {
+  content: "\e925";
+}
+.icon-skills:before {
+  content: "\e926";
+}
+.icon-startup:before {
+  content: "\e927";
+}
+.icon-submissions:before {
+  content: "\e928";
+}
+.icon-upload-email-ids:before {
+  content: "\e929";
+}
+.icon-users:before {
+  content: "\e92a";
+}
+.icon-verify-contacts-and-invite:before {
+  content: "\e92b";
+}
+.icon-visitors:before {
+  content: "\e92c";
+}
+.icon-ui-user:before {
+  content: "\e92d";
+}
+.icon-seo-hyperlink:before {
+  content: "\e92e";
+}
+.icon-location:before {
+  content: "\e92f";
+}
+.icon-education-pencil:before {
+  content: "\e930";
+}
+.icon-education-cap:before {
+  content: "\e931";
+}
+
+
+
+
+
+/*------------------------ menu icons end ----------------------*/
+
+@font-face {
+    font-family: 'ProximaNova-Light';
+    src:    url('../../css/fonts/ProximaNova/ProximaNova-Light.eot?rrcebl');
+    src:    url('../../css/fonts/ProximaNova/ProximaNova-Light.eot?rrcebl#iefix') format('embedded-opentype'),
+        url('../../css/fonts/ProximaNova/ProximaNova-Light.ttf') format('truetype'),
+        url('../../css/fonts/ProximaNova/ProximaNova-Light.svg?rrcebl#icomoon') format('svg');
+}
+@font-face {
+    font-family: 'ProximaNova-Semibold';
+    src:    url('../../css/fonts/ProximaNova/ProximaNovaSoft-Semibold.otf?rrcebl');
+    src:    url('../../css/fonts/ProximaNova/ProximaNovaSoft-Semibold.otf?rrcebl#iefix') format('embedded-opentype'),
+        url('../../css/fonts/ProximaNova/ProximaNovaSoft-Semibold.otf') format('truetype'),
+        url('../../css/fonts/ProximaNova/ProximaNovaSoft-Semibold.otf?rrcebl#icomoon') format('svg');
+}
+
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src:    url('../../css/fonts/ProximaNova/proximanova-bold-webfont.ttf?rrcebl');
+    src:    url('../../css/fonts/ProximaNova/proximanova-bold-webfont.ttf?rrcebl#iefix') format('embedded-opentype'),
+        url('../../css/fonts/ProximaNova/proximanova-bold-webfont.ttf') format('truetype'),
+        url('../../css/fonts/ProximaNova/proximanova-bold-webfont.ttf?rrcebl#icomoon') format('svg');
+}
+@font-face {
+    font-family: 'ProximaNova-Regular';
+    src:    url('../../css/fonts/ProximaNova/ProximaNova-Regular.eot?rrcebl');
+    src:    url('../../css/fonts/ProximaNova/ProximaNova-Regular.eot?rrcebl#iefix') format('embedded-opentype'),
+        url('../../css/fonts/ProximaNova/ProximaNova-Regular.ttf') format('truetype'),
+        url('../../css/fonts/ProximaNova/ProximaNova-Regular.svg?rrcebl#icomoon') format('svg');
+}
