@@ -19,9 +19,9 @@ This a queick start UPI PSP server written with ruby.
     thin -R config.ru start
    ```
 4. visit psp config page at
-  ```
+   ```
     http://<your-static-ip>:3000/Config
-  ```
+   ```
    finish the configuration
 
 5. start requesting UPI sandbox server
