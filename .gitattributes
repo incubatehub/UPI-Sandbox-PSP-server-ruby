@@ -1,1 +1,3 @@
 *.rb linguist-language=Ruby
+public/js/* linguist-vendored
+public/css/* linguist-vendored
