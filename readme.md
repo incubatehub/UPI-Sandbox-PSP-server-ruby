@@ -5,7 +5,8 @@ This a queick start UPI PSP server written with ruby.
 
 1. Place the project in your server(make sure your server has a static ip and registered in UPI Sandbox).
 2. run following commands within the project root directory
-  1.  ```
+  1.  Install dependencies
+      ```
         bundle install
       ```
 
