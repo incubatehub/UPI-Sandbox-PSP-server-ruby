@@ -11,20 +11,20 @@ nav.blue.darken-4
       li
         .divider
       li.left-align
-        a.waves-effect href="/Pay" class="#{@current=='Pay' ? 'blue darken-4 white-text': ''}"  Pay
+        a#omenu-Pay.waves-effect onclick="clearBadge('Pay')" href="/Pay" class="#{@current=='Pay' ? 'blue darken-4 white-text': ''}"  Pay
       li.left-align
-        a.waves-effect href="/AuthDetails" class="#{@current=='AuthDetails' ? 'blue darken-4 white-text': ''}"  AuthDetails
+        a#omenu-AuthDetails.waves-effect onclick="clearBadge('AuthDetails')" href="/AuthDetails" class="#{@current=='AuthDetails' ? 'blue darken-4 white-text': ''}"  AuthDetails
       li.left-align
-        a.waves-effect href="/RegMob" class="#{@current=='RegMob' ? 'blue darken-4 white-text': ''}"  RegMob
+        a#omenu-RegMob.waves-effect onclick="clearBadge('RegMob')" href="/RegMob" class="#{@current=='RegMob' ? 'blue darken-4 white-text': ''}"  RegMob
       li.left-align
-        a.waves-effect href="/ChkTxn" class="#{@current=='ChkTxn' ? 'blue darken-4 white-text': ''}"  ChkTxn
+        a#omenu-ChkTxn.waves-effect onclick="clearBadge('ChkTxn')" href="/ChkTxn" class="#{@current=='ChkTxn' ? 'blue darken-4 white-text': ''}"  ChkTxn
       li.left-align
-        a.waves-effect href="/SetCre" class="#{@current=='SetCre' ? 'blue darken-4 white-text': ''}"  SetCre
+        a#omenu-SetCre.waves-effect onclick="clearBadge('SetCre')" href="/SetCre" class="#{@current=='SetCre' ? 'blue darken-4 white-text': ''}"  SetCre
       li.left-align
-        a.waves-effect href="/BalEnq" class="#{@current=='BalEnq' ? 'blue darken-4 white-text': ''}"  BalEnq
+        a#omenu-BalEnq.waves-effect onclick="clearBadge('BalEnq')" href="/BalEnq" class="#{@current=='BalEnq' ? 'blue darken-4 white-text': ''}"  BalEnq
       li.left-align
-        a.waves-effect href="/ListAccount" class="#{@current=='ListAccount' ? 'blue darken-4 white-text': ''}"  ListAccount
+        a#omenu-ListAccount.waves-effect onclick="clearBadge('ListAccount')" href="/ListAccount" class="#{@current=='ListAccount' ? 'blue darken-4 white-text': ''}"  ListAccount
       li.left-align
-        a.waves-effect href="/ListAccPvd" class="#{@current=='ListAccPvd' ? 'blue darken-4 white-text': ''}"  ListAccPvd
+        a#omenu-ListAccPvd.waves-effect onclick="clearBadge('ListAccPvd')" href="/ListAccPvd" class="#{@current=='ListAccPvd' ? 'blue darken-4 white-text': ''}"  ListAccPvd
     a.button-collapse.hide-on-large-only href="#" data-activates="slide-out"
       i.material-icons menu

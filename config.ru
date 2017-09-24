@@ -19,6 +19,7 @@ LOGGER=Logger.new(log_file,'weekly')
 LOGGER.level=Logger::ERROR
 LOGGER.datetime_format="%d-%b-%y %I:%M:%S %p - %Z"
 DB =  Sequel.connect('sqlite://db/dummy_psp.db')
+Sequel::Model.plugin :timestamps
 DB.extension(:pagination)
 require_relative './migrations/all.rb'
 require_relative './models/all.rb'

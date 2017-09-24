@@ -50,9 +50,37 @@
         .col.s12
           #acknowledgement
 
+.row
+  .card.col.m6
+    .card-content
+      .card-title Requests
+      ul.collapsible.popout data-collapsible="accordion"
+        -if @requests
+          -@requests.each do |request|
+            li
+              .collapsible-header #{request.api} #{request.created_at}
+              .collapsible-body
+                pre
+                  code
+                    |#{request.request}
+    .card-action
+
+  .card.col.m6
+    .card-content
+      .card-title Responses
+      ul.collapsible.popout data-collapsible="accordion"
+        -if @responses
+          -@responses.each do |response|
+            li
+              .collapsible-header #{response.api} #{response.created_at}
+              .collapsible-body
+                pre
+                  code
+                    |#{response.response}
+    .card-action
+
 script {src="/js/ace/ace.js" type="text/javascript" charset="utf-8"}
 script {src="/js/ace/mode-xml.js" type="text/javascript" charset="utf-8"}
-
 css:
   #request {
        height:400px;
@@ -63,7 +91,7 @@ css:
        width:100%;
   }
   #acknowledgement {
-       height:200px;
+       height:50px;
        width:100%;
   }
 
@@ -76,22 +104,25 @@ javascript:
   var editor1 = ace.edit("request");
   editor1.setTheme("ace/theme/chrome");
   editor1.getSession().setMode("ace/mode/xml");
-  if(api!="AuthDetails")
-    editor1.setReadOnly(false);
-  else
-    editor1.setReadOnly(true);
   var editor2 = ace.edit("response");
   editor2.setTheme("ace/theme/chrome");
-  if(api=="AuthDetails")
+
+  if(api=="AuthDetails"){
     editor2.setReadOnly(false);
-  else
+    editor1.setReadOnly(true);
+    editor1.setValue("<!--Request -->");
+  }
+  else{
+    editor1.setReadOnly(false);
+    editor2.setValue("<!--Request -->");
     editor2.setReadOnly(true);
+  }
 
   editor2.getSession().setMode("ace/mode/xml");
   editor1.setWrapBehavioursEnabled(true)
   editor2.setWrapBehavioursEnabled(true)
   editor3.setWrapBehavioursEnabled(true)
-  editor2.setValue("<!--Response-->")
+
   function request(){
       var data=editor1.getValue();
       var transaction_id=$('#transactionid').val();
@@ -133,13 +164,21 @@ javascript:
       }
     })
   }
-
+  function clearBadge(menu){
+      $('#lmenu-'+menu+' .badge').remove()
+      $('#omenu-'+menu+' .badge').remove()
+  }
   var client = new Faye.Client('/live/ws');
   respFunction=function(message) {
     console.log(message);
-    if(editor2)
-    {
-      editor2.setValue(message.message)
+    if(message.api==api){
+        if(editor2)
+          editor2.setValue(message.message)
+      }
+    else{
+          clearBadge(message.api);
+          $('#lmenu-'+message.api).append($("<span>", {"class": "badge new red"}));
+          $('#omenu-'+message.api).append($("<span>", {"class": "badge new red"}));
     }
   }
 

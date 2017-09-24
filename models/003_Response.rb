@@ -1,11 +1,11 @@
-class Response<Sequel::Model(DB[:requests])
+class Response<Sequel::Model(DB[:responses])
     plugin :uuid, :field => :id
     def self.create_response(api,response)
-        response=self.create(
+        rsp=self.create(
             :api=>api,
             :response=>response
         )
-        response
+        rsp
     end
     def get_details
         values
