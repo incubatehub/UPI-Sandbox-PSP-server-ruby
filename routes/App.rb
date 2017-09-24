@@ -39,6 +39,8 @@ class App < Roda
           @dummydata=File.read("./templates/Pay/ReqPay.xml")
           page_no=params[:page] ? params[:page].to_i : 1
           page_size=25
+          @total_requests=Request.where(:api=>"ReqPay").count
+          @total_responses=Response.where(:api=>"ReqPay").count
           @requests=Request.where(:api=>"ReqPay").order(Sequel.desc(:created_at)).paginate(page_no, page_size, record_count=nil)
           @responses=Response.where(:api=>"RespPay").order(Sequel.desc(:created_at)).paginate(page_no, page_size, record_count=nil)
           view  "request_page/configure"
@@ -49,6 +51,8 @@ class App < Roda
           @dummydata=File.read("./templates/AuthDetails/RespAuthDetails.xml")
           page_no=params[:page] ? params[:page].to_i : 1
           page_size=25
+          @total_requests=Request.where(:api=>"ReqPay").count
+          @total_responses=Response.where(:api=>"ReqPay").count
           @requests=Request.where(:api=>"ReqAuthdetails").order(Sequel.desc(:created_at)).paginate(page_no, page_size, record_count=nil)
           @responses=Response.where(:api=>"RespAuthdetails").order(Sequel.desc(:created_at)).paginate(page_no, page_size, record_count=nil)
           view  "request_page/configure"
@@ -59,6 +63,8 @@ class App < Roda
           @dummydata=File.read("./templates/RegMob/ReqRegMob.xml")
           page_no=params[:page] ? params[:page].to_i : 1
           page_size=25
+          @total_requests=Request.where(:api=>"ReqPay").count
+          @total_responses=Response.where(:api=>"ReqPay").count
           @requests=Request.where(:api=>"ReqRegMob").order(Sequel.desc(:created_at)).paginate(page_no, page_size, record_count=nil)
           @responses=Response.where(:api=>"RespRegMob").order(Sequel.desc(:created_at)).paginate(page_no, page_size, record_count=nil)
           view  "request_page/configure"
@@ -69,6 +75,8 @@ class App < Roda
           @dummydata=File.read("./templates/ChkTxn/ReqChkTxn.xml")
           page_no=params[:page] ? params[:page].to_i : 1
           page_size=25
+          @total_requests=Request.where(:api=>"ReqPay").count
+          @total_responses=Response.where(:api=>"ReqPay").count
           @requests=Request.where(:api=>"ReqChkTxn").order(Sequel.desc(:created_at)).paginate(page_no, page_size, record_count=nil)
           @responses=Response.where(:api=>"RespChkTxn").order(Sequel.desc(:created_at)).paginate(page_no, page_size, record_count=nil)
           view  "request_page/configure"
@@ -79,6 +87,8 @@ class App < Roda
           @dummydata=File.read("./templates/SetCre/ReqSetCre.xml")
           page_no=params[:page] ? params[:page].to_i : 1
           page_size=25
+          @total_requests=Request.where(:api=>"ReqPay").count
+          @total_responses=Response.where(:api=>"ReqPay").count
           @requests=Request.where(:api=>"ReqSetCre").order(Sequel.desc(:created_at)).paginate(page_no, page_size, record_count=nil)
           @responses=Response.where(:api=>"RespSetCre").order(Sequel.desc(:created_at)).paginate(page_no, page_size, record_count=nil)
           view  "request_page/configure"
@@ -89,6 +99,8 @@ class App < Roda
           @dummydata=File.read("./templates/BalEnq/ReqBalEnq.xml")
           page_no=params[:page] ? params[:page].to_i : 1
           page_size=25
+          @total_requests=Request.where(:api=>"ReqPay").count
+          @total_responses=Response.where(:api=>"ReqPay").count
           @requests=Request.where(:api=>"ReqBalEnq").order(Sequel.desc(:created_at)).paginate(page_no, page_size, record_count=nil)
           @responses=Response.where(:api=>"RespBalEnq").order(Sequel.desc(:created_at)).paginate(page_no, page_size, record_count=nil)
           view  "request_page/configure"
@@ -99,6 +111,8 @@ class App < Roda
           @dummydata=File.read("./templates/ListAccount/ReqListAccount.xml")
           page_no=params[:page] ? params[:page].to_i : 1
           page_size=25
+          @total_requests=Request.where(:api=>"ReqPay").count
+          @total_responses=Response.where(:api=>"ReqPay").count
           @requests=Request.where(:api=>"ReqListAccount").order(Sequel.desc(:created_at)).paginate(page_no, page_size, record_count=nil)
           @responses=Response.where(:api=>"RespListAccount").order(Sequel.desc(:created_at)).paginate(page_no, page_size, record_count=nil)
           view  "request_page/configure"
@@ -109,6 +123,8 @@ class App < Roda
           @dummydata=File.read("./templates/ListAccPvd/ReqListAccPvd.xml")
           page_no=params[:page] ? params[:page].to_i : 1
           page_size=25
+          @total_requests=Request.where(:api=>"ReqPay").count
+          @total_responses=Response.where(:api=>"ReqPay").count
           @requests=Request.where(:api=>"ReqListAccPvd").order(Sequel.desc(:created_at)).paginate(page_no, page_size, record_count=nil)
           @responses=Response.where(:api=>"RespListAccPvd").order(Sequel.desc(:created_at)).paginate(page_no, page_size, record_count=nil)
           view  "request_page/configure"

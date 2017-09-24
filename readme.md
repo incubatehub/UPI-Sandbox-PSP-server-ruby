@@ -1,10 +1,12 @@
-# Dummy PSP Server
-This a queick start UPI PSP server written with ruby.
+# Dummy PSP server
+-------------------
+This is a quick start UPI PSP server to test with UPI SANDBOX.
+
 [Roda](http://roda.jeremyevans.net/)
 [Sequel](http://sequel.jeremyevans.net/)
 
-1. Place the project in your server(make sure your server has a static ip and registered in UPI Sandbox).
-2. run following commands within the project root directory
+1. Place the project in your server(make sure your server has a static ip and registered with UPI Sandbox).
+2. run following commands from within the project root directory
   1.  Install dependencies
       ```
         bundle install
